@@ -21,5 +21,13 @@ ALTER TABLE person2
 ALTER TABLE person2
   ALTER COLUMN user_age DROP NOT NULL
 
+ALTER TABLE person2
+   ADD constraint unique_person2_user_age UNIQUE(user_age);
+ALTER TABLE person2
+   DROP constraint unique_person2_user_age ;
+
+ALTER TABLE person2
+   ADD constraint pk_person2_user_age PRIMARY KEY(id);
+
 INSERT INTO person2 VALUES(7, 'text', 45, 'manik@gmail.com');
 
