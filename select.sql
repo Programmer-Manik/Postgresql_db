@@ -43,3 +43,27 @@ SELECT email as "Student Email" FROM students;
 SELECT * FROM students ORDER BY first_name ASC;
 
 SELECT * FROM students ORDER BY first_name DESC;
+
+
+SELECT country FROM students ORDER BY  country ASC;
+-- ORDER BY data asc or desc  serially abcd or number 123  
+
+SELECT DISTINCT country FROM students ;
+-- DISTINCT is work UNIQUE not match data
+
+SELECT DISTINCT blood_group FROM students ;
+
+-- data filtering
+-- WHERE conditions keywords use 
+SELECT * FROM students  WHERE country = 'USA';
+
+SELECT * FROM students  WHERE grade = 'A' AND course = 'Computer Science';
+
+SELECT * FROM students  WHERE country = 'USA' OR country = 'Australia';
+
+SELECT * FROM students WHERE (country = 'USA' OR country = 'Australia') AND age = 20;
+
+SELECT * FROM students WHERE age != 20 ;
+
+SELECT * FROM students WHERE age BETWEEN 20 AND 22;
+
