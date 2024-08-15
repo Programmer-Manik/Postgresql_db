@@ -29,5 +29,7 @@ ALTER TABLE person2
 ALTER TABLE person2
    ADD constraint pk_person2_user_age PRIMARY KEY(id);
 
+TRUNCATE TABLE person2 
+
 INSERT INTO person2 VALUES(7, 'text', 45, 'manik@gmail.com');
 
