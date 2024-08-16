@@ -67,3 +67,28 @@ SELECT * FROM students WHERE age != 20 ;
 
 SELECT * FROM students WHERE age BETWEEN 20 AND 22;
 
+SELECT upper(first_name) FROM students;
+
+SELECT lower(first_name) FROM students;
+
+
+SELECT LENGTH(first_name) FROM students;
+
+
+SELECT concat(first_name, last_name) FROM students;
+
+SELECT concat(first_name, ' ' , last_name) FROM students;
+
+
+SELECT AVG(age) FROM students;
+
+SELECT MAX(age) FROM students;
+
+SELECT MIN(age) FROM students;
+
+SELECT sum(age) FROM students;
+
+SELECT COUNT(*) FROM students;
+
+
+SELECT max(length(first_name)) FROM students;
