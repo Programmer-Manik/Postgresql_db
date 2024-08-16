@@ -92,3 +92,29 @@ SELECT COUNT(*) FROM students;
 
 
 SELECT max(length(first_name)) FROM students;
+
+
+SELECT * FROM students
+        WHERE not country = 'USA';
+
+        -- SELECT NULL = 1
+    SELECT * FROM students
+    WHERE dob IS NULL;
+
+    -- SELECT NULL != 1
+    SELECT * FROM students
+    WHERE dob IS NOT NULL;
+
+    -- SELECT NULL > 1
+    SELECT * FROM students
+            WHERE email IS NOT NULL;
+    SELECT * FROM students
+            WHERE email IS  NULL;
+
+    
+    SELECT * FROM students;
+
+   SELECT COALESCE(email , 'Email not provider') FROM students;
+
+
+   SELECT COALESCE(email , 'Email not provider') as "Email", first_name, last_name, age   FROM students;
