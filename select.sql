@@ -118,3 +118,31 @@ SELECT * FROM students
 
 
    SELECT COALESCE(email , 'Email not provider') as "Email", first_name, last_name, age   FROM students;
+
+--    SELECT * FROM students WHERE country = 'USA' or country = 'Uk' or country = 'Canada';
+
+   SELECT * FROM students WHERE country IN ('USA', 'Uk', 'Canada');
+
+   SELECT * FROM students WHERE country NOT IN ('USA', 'Uk', 'Canada');
+
+   SELECT * FROM students WHERE age BETWEEN 19 and 22; 
+
+   SELECT * FROM  students
+                WHERE dob BETWEEN '2000-01-01' and '2005-01-01' ORDER BY dob;
+
+SELECT * FROM students
+        WHERE first_name LIKE '%n';
+
+SELECT * FROM students
+        WHERE first_name LIKE 'M%';
+
+SELECT * FROM students
+        WHERE first_name LIKE '__a%';
+
+SELECT * FROM students
+        WHERE first_name LIKE '__a_%'
+
+SELECT * FROM students
+        WHERE first_name ILIKE 'a%'
+
+SELECT * FROM students
