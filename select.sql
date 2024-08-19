@@ -24,9 +24,9 @@ INSERT INTO students (first_name, last_name, age, grade, course, email, dob, blo
 ('William', 'Thomas', 20, 'B', 'Computer Science', 'william.thomas@example.com', '2003-06-22', 'A+', 'Australia'),
 ('Ava', 'Jackson', 19, 'A', 'Electrical Engineering', 'ava.jackson@example.com', '2004-08-30', 'B+', 'New Zealand'),
 ('James', 'White', 21, 'A', 'Mechanical Engineering', 'james.white@example.com', '2002-10-15', 'O-', 'USA'),
-('Isabella', 'Harris', 22, 'B', 'Civil Engineering', 'isabella.harris@example.com', '2001-12-20', 'AB+', 'Canada'),
+('Isabella', 'Harris', 22, 'B', 'Civil Engineering', 'jasmin@gmail.com', '2001-12-20', 'AB+', 'Canada'),
 ('Benjamin', 'Martin', 20, 'A', 'Chemical Engineering', 'benjamin.martin@example.com', '2003-03-03', 'A-', 'UK'),
-('Mia', 'Thompson', 23, 'B', 'Information Technology', 'mia.thompson@example.com', '2000-05-14', 'B-', 'Australia'),
+('Mia', 'Thompson', 23, 'B', 'Information Technology', 'kamil@gmail.com', '2000-05-14', 'B-', 'Australia'),
 ('Lucas', 'Garcia', 19, 'A', 'Software Engineering', 'lucas.garcia@example.com', '2004-07-19', 'O+', 'New Zealand'),
 ('Charlotte', 'Martinez', 21, 'B', 'Biomedical Engineering', 'charlotte.martinez@example.com', '2002-09-28', 'A+', 'USA'),
 ('Elijah', 'Clark', 22, 'A', 'Computer Science', 'elijah.clark@example.com', '2001-11-10', 'B+', 'Canada'),
@@ -166,3 +166,9 @@ DELETE FROM students
 
 DELETE FROM students
         WHERE grade = 'A' AND country = 'UK'
+
+UPDATE students
+        SET email = 'default@example.com', age = 30;
+        WHERE student_id = 94;
+SELECT * FROM students;
+
