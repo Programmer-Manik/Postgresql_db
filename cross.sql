@@ -30,5 +30,3 @@ SELECT * FROM employees
 -- NATURAL JOIN
 SELECT * FROM employees 
     NATURAL JOIN departments;
-
--- INNER JOIN
