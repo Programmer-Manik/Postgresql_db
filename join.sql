@@ -38,3 +38,31 @@ SELECT post.id FROM post
  JOIN "userss" on post.user_id = "userss".id;
 SELECT userss.id FROM post
  JOIN "userss" on post.user_id = "userss".id;
+
+
+ SELECT * FROM "userss"
+ JOIN post on post.user_id = "userss".id;
+
+
+ SELECT * FROM post as p 
+ JOIN "userss" as u ON p.user_id = u.id;
+
+ INSERT INTO post  (id, title , user_id)
+ VALUES (5, 'this is a Test Post title', NULL);
+
+
+ SELECT * FROM post as p 
+ left JOIN "userss" as u ON p.user_id = u.id;
+
+SELECT * FROM post as p 
+ right JOIN "userss" as u ON p.user_id = u.id;
+
+
+ SELECT * FROM post as p 
+ left OUTER JOIN "userss" as u ON p.user_id = u.id;
+
+SELECT * FROM post as p 
+ right OUTER JOIN "userss" as u ON p.user_id = u.id;
+ 
+
+ SELECT * FROM post
