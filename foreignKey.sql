@@ -6,7 +6,17 @@ CREATE TABLE "user"(
 CREATE TABLE post(
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
-    user_id INTEGER REFERENCES "user"(id) 
+    user_id INTEGER REFERENCES "user"(id) on delete set NULL
+)
+CREATE TABLE post(
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    user_id INTEGER REFERENCES "user"(id) on delete set NULL NOT NULL
+)
+CREATE TABLE post(
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    user_id INTEGER REFERENCES "user"(id) on DELETE SET DEFAULT DEFAULT 2
 )
 
 ALTER TABLE post
@@ -26,14 +36,24 @@ INSERT INTO post (title, user_id) VALUES
 SELECT * FROM post;
 
 
+
 INSERT INTO post (title, user_id) VALUES('manik', NULL)
 
+DROP TABLE post;
 
+DROP TABLE "user"
 
 -- Insertion constraint on insert post
 -- attempting to insert a post with a user ID that does not exist
 -- Inserting a post with a valid user ID 
 -- Attempting to insert a post without specifying a user ID
+
+
+
+DELETE FROM "user"
+    WHERE id = 4; 
+    
+SELECT * FROM post;
 
 
 -- deletion constraint on Delete user 
