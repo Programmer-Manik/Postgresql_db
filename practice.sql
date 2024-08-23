@@ -66,3 +66,32 @@ GROUP BY hire_year;
 
 
 
+CREATE Table orders (
+    order_id SERIAL PRIMARY KEY,
+    customer_id INT,
+    order_date DATE,
+    total_amount DECIMAL(10, 2)
+);
+
+INSERT INTO orders (customer_id, order_date, total_amount) 
+VALUES
+    (1, '2022-02-10', 1000),
+    (2, '2022-03-15', 2000),
+    (1, '2022-04-20', 3000),
+    (3, '2022-05-05', 4000),
+    (2, '2022-06-19', 5000),
+    (3, '2022-07-22', 6000),
+    (2, '2022-08-10', 7000),
+    (1, '2022-09-14', 8000),
+    (3, '2022-10-30', 9000),
+    (1, '2022-11-22', 100),
+    (4, '2022-12-23',300);
+
+DROP TABLE orders;
+
+SELECT * FROM orders;
+
+SELECT customer_id, COUNT(order_id), SUM(total_amount) as total_spent from orders
+    GROUP BY customer_id HAVING COUNT(order_id) > 2 ;
+
+SELECT extract(month from order_date)as month, sum(total_amount) FROM orders WHERE extract(year from order_date) = 2022 GROUP BY month;
