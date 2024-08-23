@@ -66,3 +66,8 @@ SELECT * FROM post as p
  
 
  SELECT * FROM post
+
+ SELECT * FROM post as p 
+ FULL OUTER JOIN "userss" as u ON p.user_id = u.id;
+
+ 
