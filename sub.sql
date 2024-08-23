@@ -48,3 +48,6 @@ SELECT * FROM subSql;
 SELECT max(salary) FROM subSql WHERE department_name = 'HR';
 
 SELECT * FROM subSql WHERE salary > (SELECT max(salary) FROM subSql WHERE department_name = 'HR')
+
+
+SELECT *, (SELECT SUM(salary) FROM subSql)  FROM subSql;
