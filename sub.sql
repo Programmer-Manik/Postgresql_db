@@ -51,3 +51,6 @@ SELECT * FROM subSql WHERE salary > (SELECT max(salary) FROM subSql WHERE depart
 
 
 SELECT *, (SELECT SUM(salary) FROM subSql)  FROM subSql;
+
+SELECT subSql_name , salary, department_name FROM subSql
+WHERE department_name in (SELECT department_name FROM subSql WHERE department_name LIKE '%R%')
