@@ -11,15 +11,23 @@ CREATE Table deleted_user_audit
 
 SELECT * FROM deleted_user_audit;
 
-CREATE FUNCTION save_deleted_user()
+--TRIGGER function 
+CREATE OR REPLACE FUNCTION save_deleted_user()
+    RETURNS TRIGGER
     LANGUAGE plpgsql
     AS
     $$
      BEGIN
+        INSERT INTO deleted_user_audit VALUES(OLD.user_name, now());
+        RAISE NOTICE 'deleted user audit log created successfully';
+        RETURN OLD;
      END
     $$
 
-CREATE TRIGGER save_deleted_user_trigger
+CREATE OR REPLACE TRIGGER save_deleted_user_trigger
     AFTER DELETE ON my_user
     FOR EACH ROW
     EXECUTE FUNCTION save_deleted_user();
+
+
+DELETE FROM my_user WHERE user_name = 'mr'
