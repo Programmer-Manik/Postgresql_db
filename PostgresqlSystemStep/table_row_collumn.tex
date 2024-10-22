@@ -1,0 +1,35 @@
+
+----------------single-row insert-----------------
+INSERT INTO your_table (column1, column2, column3)
+VALUES (value1, value2, value3)
+
+INSERT INTO employees (first_name, last_name, hire_data)
+VALUES ('John', 'Doe', '2022-04-15')
+
+insert into person (id, user_name, age) values(1, 'Anamul', 21);
+
+
+----------------multi-row insert-----------------
+INSERT INTO your_table (column1, column2, column3)
+VALUES 
+    (value1, value2, value3),
+    (value1, value2, value3),
+    (value1, value2, value3),
+    ...,
+
+INSERT INTO employees (first_name, last_name, hire_data)
+VALUES 
+    ('John', 'Doe', '2022-04-15'),
+    ('John', 'Doe', '2022-04-15'),
+    ('John', 'Doe', '2022-04-15'),
+    ...,
+
+    
+insert into person (id, user_name, age) values(3, 'Haque', 21), (5, 'no name', 23);
+
+
+-------------------insert---------------------
+INSERT INTO your_table
+VALUES (value1, value2, value3)
+
+insert into person values(6, 'name', 23);
