@@ -8,11 +8,13 @@ CREATE TABLE post(
     title TEXT NOT NULL,
     user_id INTEGER REFERENCES "user"(id) on delete set NULL
 )
+
 CREATE TABLE post(
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
     user_id INTEGER REFERENCES "user"(id) on delete set NULL NOT NULL
 )
+
 CREATE TABLE post(
     id SERIAL PRIMARY KEY,
     title TEXT NOT NULL,
